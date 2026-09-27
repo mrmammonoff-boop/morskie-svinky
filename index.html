@@ -2,180 +2,182 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>🐹 Мир морских свинок</title>
 
 <style>
-*{
-  box-sizing:border-box;
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fff9f3;color:#40352f}
+nav{position:sticky;top:0;background:white;padding:15px;box-shadow:0 2px 10px #0002;z-index:5}
+nav div{max-width:1100px;margin:auto;display:flex;justify-content:space-between}
+nav a{margin-left:15px;text-decoration:none;color:#654b3c}
+main{max-width:1100px;margin:auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:60px 0}
+h1{font-size:60px;line-height:1;margin:0;color:#513c31}
+h2{font-size:38px;color:#513c31}
+p{font-size:17px}
+.hero img{width:100%;height:380px;object-fit:cover;border-radius:25px}
+.btn{display:inline-block;background:#d8895d;color:white;padding:12px 20px;border-radius:25px;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 5px 20px #0001}
+.card img{width:100%;height:210px;object-fit:cover}
+.card div{padding:15px}
+.box{background:#f3e2d4;padding:25px;border-radius:20px;margin:15px 0}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:15px}
+footer{margin-top:50px;background:#513c31;color:white;text-align:center;padding:35px}
+@media(max-width:700px){
+.hero{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr 1fr}
+.gallery{grid-template-columns:1fr 1fr}
+h1{font-size:45px}
+nav a{display:none}
 }
-
-html{
-  scroll-behavior:smooth;
+@media(max-width:450px){
+.grid,.gallery{grid-template-columns:1fr}
 }
+</style>
+</head>
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fffaf5;
-  color:#333;
-  line-height:1.6;
-}
+<body>
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);
-  padding:14px 6%;
-  box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
+<nav>
+<div>
+<b>🐹 Мир морских свинок</b>
+<span>
+<a href="#breeds">Породы</a>
+<a href="#care">Уход</a>
+<a href="#food">Питание</a>
+<a href="#photos">Фото</a>
+</span>
+</div>
+</nav>
 
-.nav-inner{
-  max-width:1150px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+<main>
 
-.logo{
-  font-size:22px;
-  font-weight:800;
-  color:#513c31;
-}
+<section class="hero">
+<div>
+<h1>Мир<br>морских свинок 🐹</h1>
+<p>Породы, уход, питание, здоровье, история и интересные факты о наших пушистых друзьях.</p>
+<a class="btn" href="#breeds">Смотреть породы</a>
+</div>
 
-.logo span{
-  color:#d8895d;
-}
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20Porcellus%20%28Guinea%20Pig%29.jpg">
+</section>
 
-nav a{
-  text-decoration:none;
-  color:#513c31;
-  margin-left:18px;
-  font-weight:600;
-}
+<section id="breeds">
+<h2>🐹 Породы</h2>
 
-nav a:hover{
-  color:#d16d3f;
-}
+<div class="grid">
 
-.hero{
-  max-width:1150px;
-  margin:auto;
-  padding:70px 6% 50px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Abyssinian%20guinea%20pig.jpg">
+<div><h3>Абиссинская</h3><p>Узнаваема по красивым розеткам на шерсти.</p></div>
+</article>
 
-.hero h1{
-  font-size:clamp(42px,7vw,72px);
-  line-height:1.05;
-  margin:0 0 20px;
-  color:#513c31;
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Guinea%20pig%20%28Cavia%20porcellus%29.jpg">
+<div><h3>Тедди</h3><p>Густая и короткая шерсть с плюшевой текстурой.</p></div>
+</article>
 
-.hero p{
-  font-size:20px;
-  color:#6d625c;
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Susy%20the%20black%20guinea%20pig%20%28Cavia%20porcellus%29.jpg">
+<div><h3>Чёрная</h3><p>Эффектный однотонный окрас.</p></div>
+</article>
 
-.hero img{
-  width:100%;
-  height:420px;
-  object-fit:cover;
-  border-radius:30px;
-  box-shadow:0 20px 50px rgba(80,50,30,.18);
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20porcellus-face.JPG">
+<div><h3>Короткошерстная</h3><p>Простая в уходе короткая гладкая шерсть.</p></div>
+</article>
 
-.btn{
-  display:inline-block;
-  background:#d8895d;
-  color:white;
-  padding:13px 22px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Guinea%20Pigs.jpg">
+<div><h3>Компания</h3><p>Морские свинки — социальные животные.</p></div>
+</article>
 
-section{
-  max-width:1150px;
-  margin:auto;
-  padding:70px 6%;
-}
+<article class="card">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20porcellus01.jpg">
+<div><h3>Домашняя</h3><p>Множество окрасов и разновидностей шерсти.</p></div>
+</article>
 
-h2{
-  font-size:40px;
-  color:#513c31;
-  margin-top:0;
-}
+</div>
+</section>
 
-h3{
-  color:#513c31;
-}
+<section id="care">
+<h2>🏠 Уход</h2>
 
-.section-intro{
-  color:#70645d;
-  max-width:750px;
-}
+<div class="box">
+<h3>Что необходимо?</h3>
+<ul>
+<li>Просторная клетка или вольер</li>
+<li>Сено постоянно</li>
+<li>Свежая вода</li>
+<li>Безопасная подстилка</li>
+<li>Домик для отдыха</li>
+<li>Ежедневное общение</li>
+</ul>
+</div>
+</section>
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
+<section id="food">
+<h2>🥬 Питание</h2>
 
-.card{
-  background:white;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 8px 25px rgba(70,45,30,.09);
-  transition:.25s;
-}
+<div class="grid">
+<div class="box"><h3>🌾 Сено</h3><p>Основа рациона и источник клетчатки.</p></div>
+<div class="box"><h3>🥬 Овощи</h3><p>Разнообразные свежие овощи дают постепенно.</p></div>
+<div class="box"><h3>💧 Вода</h3><p>Чистая свежая вода должна быть всегда.</p></div>
+</div>
+</section>
 
-.card:hover{
-  transform:translateY(-5px);
-}
+<section>
+<h2>❤️ Здоровье</h2>
+<div class="box">
+<p>Следите за аппетитом, активностью, дыханием, глазами, носом, шерстью и зубами. При резком ухудшении состояния нужен ветеринар.</p>
+</div>
+</section>
 
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
-}
+<section>
+<h2>🌎 История</h2>
+<p>Домашняя морская свинка происходит от южноамериканских представителей рода Cavia. Люди одомашнили их в Южной Америке задолго до появления в Европе.</p>
+</section>
 
-.card-content{
-  padding:20px;
-}
+<section id="photos">
+<h2>📸 Галерея</h2>
 
-.card-content p{
-  color:#6f655f;
-}
+<div class="gallery">
 
-.info{
-  background:#f4e5d7;
-  border-radius:28px;
-  padding:35px;
-}
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Abyssinian%20guinea%20pig.jpg">
 
-.info ul{
-  padding-left:22px;
-}
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20Porcellus%20%28Guinea%20Pig%29.jpg">
 
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Guinea%20Pigs.jpg">
 
-.fact{
-  background:#fff;
-  border-left:6px solid #d8895d;
-  padding:22px;
-  border-radius:15px;
-  box-shadow:0 5px 18px rgba(0,0,0,.06
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Susy%20the%20black%20guinea%20pig%20%28Cavia%20porcellus%29.jpg">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20porcellus-face.JPG">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cavia%20porcellus01.jpg">
+
+</div>
+</section>
+
+<section>
+<h2>💡 Интересные факты</h2>
+
+<div class="grid">
+<div class="box"><h3>👂 Звуки</h3><p>Свинки пищат, урчат, посвистывают и используют разные звуки.</p></div>
+<div class="box"><h3>🦷 Зубы</h3><p>Зубы растут постоянно, поэтому важно много жевать.</p></div>
+<div class="box"><h3>🐹 Общение</h3><p>Морские свинки любят компанию и общение.</p></div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<h2 style="color:white">🐹 Мир морских свинок</h2>
+<p>© 2026</p>
+<p>Фотографии: Wikimedia Commons</p>
+</footer>
+
+</body>
+</html>
