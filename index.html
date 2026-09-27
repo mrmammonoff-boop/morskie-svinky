@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🐹 Мир морских свинок</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff9f2;color:#44332b;font:16px/1.6 Arial,sans-serif}
+nav{position:sticky;top:0;z-index:5;background:#fffaf2ee;
+backdrop-filter:blur(12px);padding:15px 5%;border-bottom:1px solid #ead8ca}
+.logo{font-size:21px;font-weight:bold}
+.logo span{color:#d8895d}
+nav a{float:right;margin-left:18px;color:#806f65;text-decoration:none;font-weight:bold}
+section,.hero{max-width:1150px;margin:auto;padding:65px 20px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+h1{font-size:clamp(45px,7vw,75px);line-height:.95;color:#513c31;margin:20px 0}
+h2{font-size:40px;color:#513c31;margin:8px 0 25px}
+h3{color:#513c31}
+p{color:#806f65}
+.badge{background:#ffe2cf;color:#8d593f;padding:7px 13px;
+border-radius:30px;font-weight:bold}
+.btn{display:inline-block;background:#44332b;color:white;padding:13px 18px;
+border-radius:14px;text-decoration:none;font-weight:bold;margin-top:15px}
+.btn2{background:white;color:#44332b;border:1px solid #ead8ca;margin-left:7px}
+.heroimg{height:430px;border-radius:35px;overflow:hidden}
+.heroimg img{width:100%;height:100%;object-fit:cover}
+.eyebrow{color:#78956f;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #ead8ca;border-radius:22px;overflow:hidden;
+box-shadow:0 12px 30px #5b403515}
+.card img{width:100%;height:210px;object-fit:cover}
+.card div{padding:18px}
+.tag{display:inline-block;background:#edf3e9;color:#58734f;
+padding:4px 9px;border-radius:20px;font-size:12px;font-weight:bold}
+.care{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.item{background:white;border:1px solid #ead8ca;border-radius:20px;padding:20px}
+.item b{font-size:19px;color:#513c31}
+.panel{background:white;border:1px solid #ead8ca;border-radius:22px;padding:25px}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.timeline{border-left:3px solid #e5b58f;padding-left:25px}
+.event{background:white;border:1px solid #ead8ca;border-radius:18px;padding:18px;margin-bottom:15px}
+.gallery{columns:3 250px;column-gap:15px}
+.gallery img{width:100%;margin-bottom:15px;border-radius:20px}
+.fact{background:linear-gradient(135deg,#6d8965,#9daf8c);
+color:white;border-radius:30px;padding:30px}
+.fact h2,.fact p{color:white}
+footer{background:#44332b;color:white;padding:35px;text-align:center}
+@media(max-width:750px){
+nav a{display:none}
+.hero{grid-template-columns:1fr}
+.heroimg{height:330px}
+.grid,.care,.columns{grid-template-columns:1fr}
+h2{font-size:34px}
+}
+</style>
+</head>
 
+<body>
+
+<nav>
+<div class="logo">🐹 Мир <span>морских свинок</span></div>
+<a href="#gallery">Фото</a>
+<a href="#history">История</a>
+<a href="#care">Уход</a>
+<a href="#breeds">Породы</a>
+</nav>
+
+<div class="hero">
+<div>
+<span class="badge">🐾 Большой гид</span>
+<h1>Всё о морских свинках</h1>
+<p style="font-size:19px">
+Породы, уход, питание, здоровье и история этих удивительных
+маленьких питомцев.
+</p>
+<a class="btn" href="#breeds">Смотреть породы →</a>
+<a class="btn btn2" href="#gallery">Фотографии</a>
+</div>
+
+<div class="heroimg">
+<img src="https://images.unsplash.com/photo-1557401622-cfc9734e3e7b?auto=format&fit=crop&w=1000&q=85">
+</div>
+</div>
+
+<section id="breeds">
+<div class="eyebrow">Каталог</div>
+<h2>Популярные породы</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=11">
+<div><h3>🇺🇸 Американская</h3>
+<p>Короткая гладкая шерсть. Спокойная и дружелюбная.</p>
+<span class="tag">Короткошёрстная</span></div>
+</div>
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=12">
+<div><h3>🌪 Абиссинская</h3>
+<p>Характерные розетки делают эту свинку очень узнаваемой.</p>
+<span class="tag">Розетки</span></div>
+</div>
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=13">
+<div><h3>✨ Шелти</h3>
+<p>Длинная мягкая шерсть требует регулярного ухода.</p>
+<span class="tag">Длинношёрстная</span></div>
+</div>
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=14">
+<div><h3>👑 Коронет</h3>
+<p>Эффектная длинная шерсть и характерная «корона».</p>
+<span class="tag">Длинношёрстная</span></div>
+</div>
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=15">
+<div><h3>🧸 Рекс</h3>
+<p>Плотная волнистая шерсть с плюшевой текстурой.</p>
+<span class="tag">Плюшевая</span></div>
+</div>
+
+<div class="card">
+<img src="https://loremflickr.com/700/500/guineapig?lock=16">
+<div><h3>💗 Скинни</h3>
+<p>Почти без шерсти и требует особенного ухода.</p>
+<span class="tag">Особенный уход</span></div>
+</div>
+
+</div>
+</section>
+
+<section id="care">
+<div class="eyebrow">Каждый день</div>
+<h2>Уход за морской свинкой</h2>
+
+<div class="care">
+<div class="item"><b>🌾 Сено</b><p>Должно быть доступно постоянно.</p></div>
+<div class="item"><b>💧 Вода</b><p>Свежая чистая вода каждый день.</p></div>
+<div class="item"><b>🏠 Простор</b><p>Безопасное место для движения и отдыха.</p></div>
+<div class="item"><b>🧹 Чистота</b><p>Регулярная уборка клетки и подстилки.</p></div>
+<div class="item"><b>🥬 Овощи</b><p>Разнообразные свежие овощи постепенно вводят в рацион.</p></div>
+<div class="item"><b>❤️ Общение</b><p>Спокойное обращение помогает свинке доверять человеку.</p></div>
+</div>
+</section>
+
+<section>
+<div class="eyebrow">Питание</div>
+<h2>Что должна есть свинка?</h2>
+
+<div class="columns">
+<div class="panel">
+<h3>🥬 Основа рациона</h3>
+<ul>
+<li>сено постоянно;</li>
+<li>свежая вода;</li>
+<li>подходящий корм;</li>
+<li>овощи и зелень;</li>
+<li>источники витамина C.</li>
+</ul>
+</div>
+
+<div class="panel">
+<h3>🚫 Что нельзя</h3>
+<ul>
+<li>шоколад и сладости;</li>
+<li>лук и чеснок;</li>
+<li>алкоголь и кофеин;</li>
+<li>резко менять рацион.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="history">
+<div class="eyebrow">История</div>
+<h2>Путь из Южной Америки</h2>
+
+<div class="timeline">
+<div class="event"><b>Древние Анды</b><br>
+Предки домашних морских свинок были одомашнены в Южной Америке тысячи лет назад.</div>
+
+<div class="event"><b>Народы Анд</b><br>
+Свинки были частью быта и культуры региона.</div>
+
+<div class="event"><b>Европа</b><br>
+В XVI веке морские свинки попали в Европу.</div>
+
+<div class="event"><b>Сегодня</b><br>
+Существует множество пород, окрасов и типов шерсти.</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="eyebrow">Фотогалерея</div>
+<h2>Пушистая фотостена 📸</h2>
+
+<div class="gallery">
+<img src="https://loremflickr.com/700/700/guineapig?lock=21">
+<img src="https://loremflickr.com/700/850/guineapig?lock=22">
+<img src="https://loremflickr.com/700/600/guineapig?lock=23">
+<img src="https://loremflickr.com/700/900/guineapig?lock=24">
+<img src="https://loremflickr.com/700/750/guineapig?lock=25">
+<img src="https://loremflickr.com/700/650/guineapig?lock=26">
+</div>
+</section>
+
+<section>
+<div class="fact">
+<div class="eyebrow" style="color:#e8f1e4">Интересный факт</div>
+<h2>🐹 Морская свинка — настоящий травоядный!</h2>
+<p>
+Она не синтезирует витамин C самостоятельно, поэтому он должен
+поступать с пищей.
+</p>
+</div>
+</section>
+
+</body>
+
+<footer>
+🐹 <b>Мир морских свинок</b><br>
+Маленькие друзья — большая любовь ❤️
+</footer>
+
+</html>
